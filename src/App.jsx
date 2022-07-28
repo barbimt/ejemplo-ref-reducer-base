@@ -4,6 +4,7 @@ import logo from "./logo.svg";
 import menu from "./menu.svg";
 import magnifier from "./magnifier.svg";
 import "./App.css";
+import Contador from "./Contador";
 
 let initialState = {
   currentSearch: "",
@@ -31,8 +32,8 @@ let reducer = (state, action) => {
     case "BORRAR_ITEM":
       return {
         ...state,
-        currentSearch: {...state.currentSearch},
-        historial:action.payload
+        currentSearch: { ...state.currentSearch },
+        historial: action.payload,
       };
   }
 };
@@ -142,6 +143,13 @@ function App() {
             Limpiar lista
           </button>
         </div>
+<hr/>
+      <div className="">
+        <h1>
+          Paso a paso useReducer
+        </h1>
+        <Contador/>
+      </div>
       </main>
     </>
   );
